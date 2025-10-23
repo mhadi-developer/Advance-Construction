@@ -1,0 +1,97 @@
+.filters a {
+  text-decoration: none;
+  display: inline-block;
+  background-color: #191a33;
+  color: #fff;
+  padding: 8px 16px;
+  margin: 5px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.filters a.is-checked,
+.filters a:hover {
+  background-color: #ff5f13;
+}
+
+/* Isotope base */
+.grid {
+  position: relative;
+}
+
+.grid-sizer,
+.grid-item {
+  transition: all 0.4s ease;
+
+}
+.project-card .project-card-img {
+  position: relative;
+  overflow: hidden; /* keeps the zoomed image inside the card */
+  border-radius: 8px 8px 0 0; /* optional: matches card corners */
+}
+
+.project-card .project-card-img img {
+  width: 100%;
+  max-width: fit-content;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+/* Add consistent spacing between cards */
+.grid-item {
+  margin-block: 1rem;
+  padding: 0.5rem; /* helps cards breathe on small screens */
+}
+
+/* --- Responsive Layout --- */
+@media (min-width: 1200px) {
+  .grid-sizer,
+  .grid-item {
+    width: 33.333%;
+  }
+}
+
+@media (max-width: 1199.98px) and (min-width: 992px) {
+  .grid-sizer,
+  .grid-item {
+    width: 33.333%;
+  }
+}
+
+@media (max-width: 991.98px) and (min-width: 768px) {
+  .grid-sizer,
+  .grid-item {
+    width: 50%;
+  }
+}
+
+@media (max-width: 767.98px) and (min-width: 576px) {
+  .grid-sizer,
+  .grid-item {
+    width: 100%;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .grid-sizer,
+  .grid-item {
+    width: 100%;
+  }
+}
+
+/* --- Small screen tweaks --- */
+@media (max-width: 768px) {
+  .project-card-wrapper {
+    padding: 0 10px;
+  }
+
+  .filters a {
+    padding: 6px 12px;
+    margin: 4px;
+    font-size: 14px;
+  }
+
+  .project-card .project-card-body h3 {
+    font-size: 1rem;
+  }
+}
